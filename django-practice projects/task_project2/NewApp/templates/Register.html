@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div style="text-align:center;">
+    <h1>Registration Form</h1>
+    <form method="post" action="{%url 'save_register'%}">
+        {%csrf_token%}
+        <input type="text" placeholder="Name" name="Name"><br><br>
+        <input type="text" placeholder="Age" name="Age"><br><br>
+        <input type="text" placeholder="Place" name="Place"><br><br>
+        <input type="text" placeholder="Mobile" name="Mobile"><br><br>
+        <select name="course">
+          <option value="-- Select a Course --">-- Select a Course --</option>
+          <option value="math">Mathematics</option>
+          <option value="science">Science</option>
+          <option value="history">History</option>
+          <option value="english">English</option>
+        </select><br><br>
+        <textarea placeholder="Address" name="Address"></textarea><br><br>
+        <input type="email" placeholder="Email" name="email"><br><br>
+        <input type="text" placeholder="Username" name="username"><br><br>
+        <input type="password" placeholder="Password" name="password"><br><br>
+        <button type="submit">Submit</button>
+
+    </form>
+</div>
+</body>
+</html>
