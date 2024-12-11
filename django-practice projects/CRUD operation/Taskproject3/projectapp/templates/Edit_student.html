@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div style="text-align:center;">
+  <h1> Edit Student Registration</h1>
+  <form method="post" action="{%url 'update_student' stud_id=data.id%}">
+    {%csrf_token%}
+    <input type="text" placeholder="Name" name="Name" value="{{data.Name}}"><br><br>
+    <input type="text" placeholder="Age" name="Age" value="{{data.Age}}"><br><br>
+    <input type="text" placeholder="Place" name="Place" value="{{data.Place}}"><br><br>
+    <input type="text" placeholder="Mobile number" name="Mobile" value="{{data.Mobile_number}}"><br><br>
+    <textarea placeholder="Address" name="Address">{{data.Address}}</textarea><br><br>
+    <input type="text" placeholder="Course" name="Course" value="{{data.Course}}"><br><br>
+    <input type="text" placeholder="Institute" name="Institute" value="{{data.Institute}}"><br><br>
+    <input type="text" placeholder="Course duration" name="Duration" value="{{data.Course_duration}}"><br><br>
+    <button type="submit">Update</button>
+  </form>
+</div>
+</body>
+</html>

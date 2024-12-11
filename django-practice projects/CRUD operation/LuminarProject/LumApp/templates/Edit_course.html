@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div style="text-align:center;">
+  <h1>Edit Course Details</h1>
+  <form method="post" action="{%url 'update_course' course_id=data.id %}">
+    {%csrf_token%}
+    <input type="text" placeholder="Course Name" name="Course_name" value="{{data.Course_name}}"><br><br>
+    <input type="text" placeholder="Duration" name="Duration" value="{{data.Duration}}"><br><br>
+    <input type="text" placeholder="Fees" name="Fees" value="{{data.Fees}}"><br><br>
+    <input type="text" placeholder="Institute name" name="Institute_name" value="{{data.Institute}}"><br><br>
+    <textarea placeholder="Description" name="Description">{{data.Description}}</textarea><br><br>
+    <button type="submit">Update</button>
+  </form>
+</div>
+</body>
+</html>

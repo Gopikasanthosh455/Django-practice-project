@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+  <h1 style="Text-align:center;">Course details</h1>
+  <table style="text-align:center;width:100%;">
+    <tr>
+      <th>Course Name</th>
+      <th>Duration</th>
+      <th>Fees</th>
+      <th>Institute Name</th>
+      <th>Description</th>
+    </tr>
+    {%for i in data%}
+    <tr>
+      <td>{{i.Course_name}}</td>
+      <td>{{i.Duration}}</td>
+      <td>{{i.Fees}}</td>
+      <td>{{i.Institute}}</td>
+      <td>{{i.Description}}</td>
+      <td>
+        <a href="{%url 'Edit_course' course_id=i.id %}">
+          <button>Edit</button>
+        </a>
+      </td>
+      <td>
+        <a href="{%url 'delete_course' course_id=i.id %}">
+          <button>Delete</button>
+        </a>
+      </td>
+    </tr>
+    {%endfor%}
+  </table>
+</div>
+</body>
+</html>

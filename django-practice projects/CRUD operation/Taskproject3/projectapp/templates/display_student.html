@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <h1 style="text-align:center;">Student details</h1>
+    <table style="text-align:center;width:100%">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Place</th>
+            <th>Mobile</th>
+            <th>Address</th>
+            <th>Course</th>
+            <th>Institute</th>
+            <th>Duration</th>
+        </tr>
+        {% for i in data%}
+        <tr>
+            <td>{{i.Name}}</td>
+            <td>{{i.Age}}</td>
+            <td>{{i.Place}}</td>
+            <td>{{i.Mobile_number}}</td>
+            <td>{{i.Address}}</td>
+            <td>{{i.Course}}</td>
+            <td>{{i.Institute}}</td>
+            <td>{{i.Course_duration}}</td>
+            <td>
+                <a href="{% url 'Edit_student' Stud_id=i.id%}">
+                    <button>Edit</button>
+                </a>
+            </td>
+            <td>
+                <a href="{% url 'delete_student' stud_id=i.id%}">
+                    <button>Delete</button>
+                </a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+</body>
+</html>
